@@ -48,3 +48,5 @@ Having trouble with Pages? Check out our [documentation](https://docs.github.com
 2.cd是change directory 改变当前目录
 
 3.查看当前进程 top -c
+
+4.  Linux下还提供了一个killall命令，可以直接使用进程的名字而不是进程标识号，例如：# killall -9 NAME

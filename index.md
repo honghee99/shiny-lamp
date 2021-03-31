@@ -57,3 +57,12 @@ Having trouble with Pages? Check out our [documentation](https://docs.github.com
 3.查看当前进程 top -c
 
 4.  Linux下还提供了一个killall命令，可以直接使用进程的名字而不是进程标识号，例如：# killall -9 NAME
+### C++
+Vector 容器 向量类
+vector类称作向量类，它实现了动态的数组，用于元素数量变化的对象数组。
+构造函数：
+vector（）：创建一个空的vector。
+vector（itn nSize）：创建一个vector，元素个数为nSize。
+vector（int nSize， const T& t）：创建一个vector，元素个数为nSize，且值均为t。
+vector（const vector&）：拷贝构造函数。
+vector<int>a,b(n,0)的意思就是 创建了一个 int 类型的空的vector容器a，和一个 int 类型n个元素，且值均为0的vecotr容器b。

@@ -9,6 +9,13 @@ Syntax highlighted code block
 # 深度学习 1
 ## 残差网络 2
 ### 目标检测 3
+message ConcatParameter {
+  //指定拼接的维度，默认为1即以channel通道进行拼接;支持负索引，即-1表示最后一个维度
+  optional int32 axis = 2 [default = 1];
+ 
+  // 以后会被弃用，作用同axis一样，但不能指定为负数
+  optional uint32 concat_dim = 1 [default = 1];
+}
 ![image](https://user-images.githubusercontent.com/49737867/113100535-1eee0b80-922e-11eb-8d11-b165785f2bae.png)
 
 - Bulleted

@@ -23,7 +23,7 @@ Syntax highlighted code block
 
 For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
 
-### Colab易错总结
+### Colab踩坑记录
 1.一定要注意先选取运行环境！！！否则后面的工作白做
 
 2.在colab中使用命令需要注意对空格的转义
@@ -39,7 +39,7 @@ For more details see [GitHub Flavored Markdown](https://guides.github.com/featur
 4.dataset not found错误，数据集的路径没有写对
 data.yaml里面的相对路径取决于当前目录（也就是cd），个人觉得换成绝对路径好一些
 
-
+5.如果跑代码时间过长服务器会断开，因此不适合数据量较大的代码
 ### Linux命令
 1.pwd 可以得知当前工作目录的绝对路径
 Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.

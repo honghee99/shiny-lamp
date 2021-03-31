@@ -56,7 +56,7 @@ Having trouble with Pages? Check out our [documentation](https://docs.github.com
 
 3.查看当前进程 top -c
 
-4.  Linux下还提供了一个killall命令，可以直接使用进程的名字而不是进程标识号，例如：# killall -9 NAME
+4.Linux下还提供了一个killall命令，可以直接使用进程的名字而不是进程标识号，例如：# killall -9 NAME
 ### C++
 Vector 容器 向量类
 vector类称作向量类，它实现了动态的数组，用于元素数量变化的对象数组。

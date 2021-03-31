@@ -46,3 +46,5 @@ data.yaml里面的相对路径取决于当前目录（也就是cd），个人觉
 Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
 
 2.cd是change directory 改变当前目录
+
+3.查看当前进程 top -c

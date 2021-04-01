@@ -28,7 +28,10 @@ message ConcatParameter {
 
 [Link](url) and ![Image](src)
 ```
-
+#### YOLOv1
+1.Yolo很快，因为用回归的方法，并且不用复杂的框架。
+2.Yolo会基于整张图片信息进行预测，而其他滑窗式的检测框架，只能基于局部图片信息进行推理。
+3.Yolo学到的图片特征更为通用。作者尝试了用自然图片数据集进行训练，用艺术画作品进行预测，Yolo的检测效果更佳。
 For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
 
 ### Colab踩坑记录

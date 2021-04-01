@@ -77,7 +77,6 @@ vector<int>a,b(n,0)的意思就是 创建了一个 int 类型的空的vector容�
 ![image](https://user-images.githubusercontent.com/49737867/113252683-b7e85980-92f6-11eb-80d2-e320f016b8c2.png)
 
 4.CNN处理图像的整个过程
-![image](https://user-images.githubusercontent.com/49737867/113253456-d8fd7a00-92f7-11eb-9cfa-9605d7512e8f.png)
 ![cnn](https://user-images.githubusercontent.com/49737867/113255348-4f9b7700-92fa-11eb-8f7c-648c6c732861.png)
 
 

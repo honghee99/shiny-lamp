@@ -75,6 +75,7 @@ vector<int>a,b(n,0)的意思就是 创建了一个 int 类型的空的vector容�
 2.每个neuron（这里是fillter）各司其职，比如一张鸟的图片，其中一个neuron会观察图片中有没有鸟嘴，这就是property2（见图-CNN处理图像的整个过程）。
 
 如图，该fillter职责就是检测有没有主对角线的（1，1，1），最后卷积结果得3（原图像的像素只有0和1，因此卷积运算得3，对应区域主对角线上一定是（1，1，1））
+
 ![22](https://user-images.githubusercontent.com/49737867/113258918-1fa2a280-92ff-11eb-958a-341bd5a2ad24.png)
 
 

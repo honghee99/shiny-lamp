@@ -77,7 +77,7 @@ vector<int>a,b(n,0)的意思就是 创建了一个 int 类型的空的vector容�
 
 ![卷积原理](https://user-images.githubusercontent.com/49737867/113261213-c425e400-9301-11eb-874b-7b9524bf5449.png)
 
-按理来说，上图中的neuron的input应该是所有的weght，但是卷积操作相当于input只有9个
+按理来说，上图中的neuron应该连接36个input，但是卷积操作相当于input只有9个
 
 2.每个neuron（这里是fillter）各司其职，比如一张鸟的图片，其中一个neuron会观察图片中有没有鸟嘴，这就是property2（见图-CNN处理图像的整个过程）。
 

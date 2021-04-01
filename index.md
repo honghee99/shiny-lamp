@@ -73,8 +73,12 @@ vector<int>a,b(n,0)的意思就是 创建了一个 int 类型的空的vector容�
 1.卷积神经网络的提出：假设有一张100*100的彩色图片，映射为向量就是3万维，如果用全连接层的话，就需要大量的参数（例如第一层就一千个神经元），因此提出卷积神经网络，它可以滤掉多余的参数。
 
 2.每个neuron各司其职，比如一张鸟的图片，其中一个neuron会观察图片中有没有鸟嘴
+如图，该fillter职责就是检测有没有主对角线的（1，1，1），最后卷积结果得3（原图像的像素只有0和1，因此卷积运算得3，对应区域主对角线上一定是（1，1，1））
+![22](https://user-images.githubusercontent.com/49737867/113257816-b79f8c80-92fd-11eb-9dfa-22628de0cdd5.png)
 
-3.subsampling子抽样，抽出图片中一个区域，比如把这张图片的奇数行偶数列拿掉，不会影响人对这张image的理解，这也是卷积神经网络池化的思想。
+
+3.sub![Uploading 22.png…]()
+sampling子抽样，抽出图片中一个区域，比如把这张图片的奇数行偶数列拿掉，不会影响人对这张image的理解，这也是卷积神经网络池化的思想。
 
 ![111](https://user-images.githubusercontent.com/49737867/113255916-00a21180-92fb-11eb-97dd-001229e3ae6c.png)
 
@@ -83,7 +87,9 @@ vector<int>a,b(n,0)的意思就是 创建了一个 int 类型的空的vector容�
 
 ![cnn](https://user-images.githubusercontent.com/49737867/113255348-4f9b7700-92fa-11eb-8f7c-648c6c732861.png)
 
-5.CNN中每一个filter等于Fully Connected layer的每一个neuron
+5.CNN中每一个filter等于Fully Connected layer的每一个neuron，每一个fillter也是matrix，里面的每个参数如同fully connected layer中的weght和bias一样，是学出来的，卷积运算为内积（对应元素相乘相加）
+
+stride为挪动距离
 
 
 ### 概率统计 

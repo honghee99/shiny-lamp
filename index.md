@@ -73,7 +73,7 @@ vector<int>a,b(n,0)的意思就是 创建了一个 int 类型的空的vector容�
 
 2.每个neuron各司其职，比如一张鸟的图片，其中一个neuron会观察图片中有没有鸟嘴
 
-3.subsampling子抽样，抽出图片中一个区域，比如把这张图片的奇数行偶数列拿掉，不会影响人对这张image的理解
+3.subsampling子抽样，抽出图片中一个区域，比如把这张图片的奇数行偶数列拿掉，不会影响人对这张image的理解，这也是卷积神经网络处理图像的思想。
 ![image](https://user-images.githubusercontent.com/49737867/113252683-b7e85980-92f6-11eb-80d2-e320f016b8c2.png)
 
 ### 概率统计 

@@ -78,6 +78,7 @@ vector<int>a,b(n,0)的意思就是 创建了一个 int 类型的空的vector容�
 
 4.CNN处理图像的整个过程
 ![image](https://user-images.githubusercontent.com/49737867/113253456-d8fd7a00-92f7-11eb-9cfa-9605d7512e8f.png)
+![image](https://user-images.githubusercontent.com/49737867/113255170-1531da00-92fa-11eb-9775-2d3cc26471d1.png)
 
 ### 概率统计 
 1.置信度

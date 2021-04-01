@@ -115,6 +115,8 @@ stride为挪动距离
 
 Maxpooling利用了Max是如何微分的？利用maxout network.
 
+9.CNN处理后的结果是几维取决于fillter的个数
+
 
 
 ### 概率统计 

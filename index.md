@@ -100,7 +100,8 @@ stride为挪动距离
 
 不是matrix，是三维张量（立方体）
 
-![无标题](https://user-images.githubusercontent.com/49737867/113259935-444b4a00-9300-11eb-983a-3fc5a705130a.png)
+![dsa](https://user-images.githubusercontent.com/49737867/113260211-92604d80-9300-11eb-8dfa-5f18d2d55004.png)
+
 
 
 ### 概率统计 

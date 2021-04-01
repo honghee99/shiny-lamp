@@ -94,6 +94,7 @@ sampling子抽样，抽出图片中一个区域，比如把这张图片的奇数
 
 stride为挪动距离
 
+6.feature map：一个fillter对一个图像进行一次卷积运算后得到的图。如果有100个fillter就会得到100个feature map.
 
 ### 概率统计 
 1.置信度

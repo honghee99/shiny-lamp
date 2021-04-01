@@ -71,6 +71,13 @@ vector<int>a,b(n,0)的意思就是 创建了一个 int 类型的空的vector容�
 1.启发式算法：启发式算法以仿自然体算法为主，主要有蚁群算法、模拟退火法、神经网络等
 ### DeepLearning
 1.卷积神经网络的提出：假设有一张100*100的彩色图片，映射为向量就是3万维，如果用全连接层的话，就需要大量的参数（例如第一层就一千个神经元），因此提出卷积神经网络，它可以滤掉多余的参数。
+说白了就是fully connected layer 把一些weight拿掉而已
+
+证明如下：
+
+![卷积原理](https://user-images.githubusercontent.com/49737867/113261213-c425e400-9301-11eb-874b-7b9524bf5449.png)
+
+按理来说，上图中的neuron的input应该是所有的weght，但是卷积操作相当于input只有9个
 
 2.每个neuron（这里是fillter）各司其职，比如一张鸟的图片，其中一个neuron会观察图片中有没有鸟嘴，这就是property2（见图-CNN处理图像的整个过程）。
 

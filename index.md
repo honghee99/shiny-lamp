@@ -97,9 +97,10 @@ sampling子抽样，抽出图片中一个区域，比如把这张图片的奇数
 
 ![cnn](https://user-images.githubusercontent.com/49737867/113255348-4f9b7700-92fa-11eb-8f7c-648c6c732861.png)
 
-5.CNN中每一个filter等于Fully Connected layer的每一个neuron，每一个fillter也是matrix，里面的每个参数如同fully connected layer中的weght和bias一样，是学出来的，卷积运算为内积（对应元素相乘相加）
+5.CNN中每一个filter的每个元素等于Fully Connected layer的每一个neuron，每一个filter做一次卷积操作得到的一个元素（这里不指特征图，该元素指特征图中的一个picxel）对应一个全连接层的neuron（结果），不同之处在于filter共享weight，而全连接层不能。
 
-从另一个层面（运算结果）去看，每一个filter做一次卷积操作得到的一个元素（这里不指特征图，该元素指特征图中的一个picxel）对应一个全连接层的neuron（结果），不同之处在于filter共享weight，而全连接层不能
+每一个fillter也是matrix，里面的每个参数如同fully connected layer中的weght和bias一样，是学出来的，卷积运算为内积（对应元素相乘相加）
+
 
 stride为挪动距离
 

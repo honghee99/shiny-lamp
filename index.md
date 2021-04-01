@@ -41,7 +41,9 @@ message ConcatParameter {
 
 5.Precision x Recall曲线（PR曲线）:
 判断法1：观察某一个目标检测模型关于某一类别的PR曲线，如果随着recall的增高，其precision仍旧保持较高的值（无论如何设置confidence的阈值，precision和recall都能保持较高的值），那么我们就可以认为对于该类别来说，该模型具有比较好的性能。
+
 判断法2：判断目标检测模型性能好坏的另外一种方式是：看该模型是否只会识别出真实的目标（False Positives的个数为0，即高precision），同时能够检测出所有的真实目标（False Negatives的个数为0，即高recall）。
+
 而一个性能比较差的模型要想检测出所有的真实目标（高recall），就需要增加其检测出的目标的个数（提高False Positive），这会导致模型的precision降低。在实际测试中，我们会发现PR曲线在一开始就有较高的precision，但随着recall的增高，precision会逐渐降低。
 
 ### Colab踩坑记录

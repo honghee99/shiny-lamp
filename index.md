@@ -48,8 +48,9 @@ message ConcatParameter {
 
 6.Average Precision:
 另外一种表征目标检测模型性能的方式是计算PR曲线下的面积（area under the curve, AUC）。因为PR曲线总是呈Z字型上升和下降，因而我们很难将多个模型的PR曲线绘制在一起进行比较（曲线会相互交叉）。这也是我们常使用AP这一具有具体的数值的度量方式的原因。
-
 实际上，可以将AP看作precision以recall为权重的加权平均。
+
+7.mAP的计算 ...
 ### Colab踩坑记录
 1.一定要注意先选取运行环境！！！否则后面的工作白做
 

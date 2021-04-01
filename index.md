@@ -110,7 +110,10 @@ stride为挪动距离
 
 不是matrix，是三维张量（立方体）
 
+8.思考：CNN训练方法，现在都是用tookit实现的，理论与全连接层一样，只不过一些weight恒为0，并且用一些方法使weight共享
 ![dsa](https://user-images.githubusercontent.com/49737867/113260211-92604d80-9300-11eb-8dfa-5f18d2d55004.png)
+
+Maxpooling利用了Max是如何微分的？利用maxout network.
 
 
 

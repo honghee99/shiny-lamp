@@ -83,6 +83,7 @@ vector<int>a,b(n,0)的意思就是 创建了一个 int 类型的空的vector容�
 
 ![cnn](https://user-images.githubusercontent.com/49737867/113255348-4f9b7700-92fa-11eb-8f7c-648c6c732861.png)
 
+5.CNN中每一个filter等于Fully Connected layer的每一个neuron
 
 
 ### 概率统计 

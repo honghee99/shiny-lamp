@@ -99,6 +99,8 @@ sampling子抽样，抽出图片中一个区域，比如把这张图片的奇数
 
 5.CNN中每一个filter等于Fully Connected layer的每一个neuron，每一个fillter也是matrix，里面的每个参数如同fully connected layer中的weght和bias一样，是学出来的，卷积运算为内积（对应元素相乘相加）
 
+从另一个层面（运算结果）去看，每一个filter做一次卷积操作得到的一个元素（这里不指特征图，该元素指特征图中的一个picxel）对应一个全连接层的neuron（结果），不同之处在于filter共享weight，而全连接层不能
+
 stride为挪动距离
 
 6.feature map：一个fillter对一个图像进行一次卷积运算后得到的图。如果有100个fillter就会得到100个feature map.

@@ -22,9 +22,19 @@ message ConcatParameter {
 **Bold** and _Italic_ and `Code` text
 [Link](url) and ![Image](src)
 ```
-#### backbone
-主干网络，用来做特征提取的网络，代表网络的一部分，一般是用于前端提取图片信息，生成特征图feature map,供后面的网络使用。通常用VGGNet还有你说的Resnet，因为这些backbone特征提取能力是很强，并且可以加载官方在大型数据集(Pascal 、Imagenet)上训练好的模型参数，然后接自己的网络，进行微调finetune即可
+#### basic
+1.backbone：主干网络，用来做特征提取的网络，代表网络的一部分，一般是用于前端提取图片信息，生成特征图feature map,供后面的网络使用。通常用VGGNet还有你说的Resnet，因为这些backbone特征提取能力是很强，并且可以加载官方在大型数据集(Pascal 、Imagenet)上训练好的模型参数，然后接自己的网络，进行微调finetune即可
 
+2.DPM模型：Deformable part model 为可形变部件模型，简称DPM模型。这种模型非常地直观，它将目标对象建模成几个部件的组合。
+特征金字塔
+
+3.ground truth：真实标签，人为为每个目标标记的标签
+
+#### Faster RCNN
+1.提出anchor box的原因：
+一个窗口只能检测一个目标
+无法解决多尺度问题。
+扩展：在解决多尺度问题时主要采用一种思想--金字塔，或者是例如DPM模型中经典的特征金字塔。在不同分辨率的特征图下检测不同尺寸的目标。但是这样存在一个问题，就是大大的增加了计算量
 #### YOLOv1
 优点：
 1.Yolo很快，因为用回归的方法，并且不用复杂的框架。

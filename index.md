@@ -34,6 +34,15 @@ message ConcatParameter {
 1.提出anchor box的原因：
 一个窗口只能检测一个目标
 无法解决多尺度问题。
+2.什么时候触发anchorbox？
+
+在经过一系列卷积和池化之后，在feature map层使用anchor box，如上图所示，经过一系列的特征提取，最后针对 [公式] 的网格会得到一个 [公式] 的特征层，其中2是anchor box的个数，以《deep learning》课程为例选择两个anchor box，8代表每个anchor box包含的变量数，分别是4个位置偏移量、3个类别(one-hot标注方式)、1个anchor box标注(如果anchor box与真实边框的交并比最大则为1，否则为0)。
+
+（个人认为四个位置偏移量是针对整张图的，而不是针对特征图里的小框框）
+
+到了特征层之后对每个cell映射到原图中，找到预先标注的anchor box，然后计算这个anchor box与ground truth之间的损失，训练的主要目的就是训练出用anchor box去拟合真实边框的模型参数。
+
+
 扩展：在解决多尺度问题时主要采用一种思想--金字塔，或者是例如DPM模型中经典的特征金字塔。在不同分辨率的特征图下检测不同尺寸的目标。但是这样存在一个问题，就是大大的增加了计算量
 #### YOLOv1
 优点：

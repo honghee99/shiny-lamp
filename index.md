@@ -22,6 +22,9 @@ message ConcatParameter {
 **Bold** and _Italic_ and `Code` text
 [Link](url) and ![Image](src)
 ```
+####backbine
+主干网络，用来做特征提取的网络，代表网络的一部分，一般是用于前端提取图片信息，生成特征图feature map,供后面的网络使用。通常用VGGNet还有你说的Resnet，因为这些backbone特征提取能力是很强，并且可以加载官方在大型数据集(Pascal 、Imagenet)上训练好的模型参数，然后接自己的网络，进行微调finetune即可
+
 #### YOLOv1
 优点：
 1.Yolo很快，因为用回归的方法，并且不用复杂的框架。

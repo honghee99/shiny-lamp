@@ -64,6 +64,20 @@ message ConcatParameter {
 3.Convolutional With Anchor Boxes（Anchor Box替换全连接层）
 每个格点指定n个Anchor框。在训练时，最接近ground truth的框产生loss，其余框不产生loss。在引入Anchor Box操作后，mAP由69.5下降至69.2，原因在于，每个格点预测的物体变多之后，召回率大幅上升，准确率有所下降，总体mAP略有下降。
 v2中移除了v1最后的两层全连接层，全连接层计算量大，耗时久。
+
+4. Dimension Clusters（Anchor Box的宽高由聚类产生
+
+5.Direct location prediction（绝对位置预测）
+
+6.Fine-Grained Features（细粒度特征）
+在26*26的特征图，经过卷积层等，变为13*13的特征图后，作者认为损失了很多细粒度的特征，导致小尺寸物体的识别效果不佳，所以在此加入了passthrough层。
+
+本质其实就是特征重排，26*26*512的feature map分别按行和列隔点采样，可以得到4幅13*13*512的特征，把这4张特征按channel串联起来，就是最后的13*13*2048的feature map.还有就是，passthrough layer本身是不学习参数的，直接用前面的层的特征重排后拼接到后面的层，越在网络前面的层，感受野越小，有利于小目标的检测
+
+
+#### YOLOv3
+
+
 #### 目标检测评价指标
 1.置信度：置信度即模型认为检测框中存在目标的确信度。对于一个检测框，会首先使用置信度阈值进行过滤，当检测框的置信度大于该阈值时才认为检测框中存在目标（即为正样本，positive），否则认为不存在目标（即为负样本，negative）。
 

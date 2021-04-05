@@ -199,6 +199,8 @@ Maxpooling利用了Max是如何微分的？利用maxout network.
 
 9.CNN处理后的结果是几维取决于fillter的个数
 
+10.inference 推理，就是把训练好的模型拿出来遛一遛
+
 ### matlab
 MATLAB的inline通俗的来说就是用于定义函数，如图所示我们使用inline定义一个函数
 

@@ -148,7 +148,7 @@ vector（int nSize）：创建一个vector，元素个数为nSize。
 vector（int nSize， const T& t）：创建一个vector，元素个数为nSize，且值均为t。
 vector（const vector&）：拷贝构造函数。
 vector<int>a,b(n,0)的意思就是 创建了一个 int 类型的空的vector容器a，和一个 int 类型n个元素，且值均为0的vecotr容器b。
-  
+5. sudo install pip requrement（安装环境） 发生错误时，可以sudo chmod -R 777 username
 ### 最优化
 1.启发式算法：启发式算法以仿自然体算法为主，主要有蚁群算法、模拟退火法、神经网络等
 ### DeepLearning

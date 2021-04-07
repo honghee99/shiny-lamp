@@ -237,7 +237,8 @@ os.sep实现了命令跨平台的兼容
 教程：
 https://www.cnblogs.com/xuegqcto/p/8621689.html
 For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+踩过的坑：远程调试时找不到文件
 
-远程调试时找不到文件，路径问题
+解决方法：路径错误，run configration里面脚本路径和工作目录都设置为服务器上的路径
 
 https://www.cnblogs.com/andre-ma/p/13424741.html

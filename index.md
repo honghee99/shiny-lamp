@@ -237,6 +237,9 @@ MATLAB的inline通俗的来说就是用于定义函数，如图所示我们使�
 在Windows上，文件的路径分隔符是'\'，在Linux上是'/'。
 os.sep实现了命令跨平台的兼容
 
+4.os.path.splitext(x)[-1].lower()
+
+os.path.splitext(“文件路径”) 分离文件名与扩展名；默认返回(fname,fextension)元组，可做分片操作
 ### pycharm远程调试
 教程：
 https://www.cnblogs.com/xuegqcto/p/8621689.html

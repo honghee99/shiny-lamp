@@ -240,6 +240,12 @@ os.sep实现了命令跨平台的兼容
 4.os.path.splitext(x)[-1].lower()
 
 os.path.splitext(“文件路径”) 分离文件名与扩展名；默认返回(fname,fextension)元组，可做分片操作
+### tensorboard使用方法
+
+在项目中找到runs文件夹，打开当前代码对应的日期文件夹，可以看到前缀为event.out的文件，在该文件夹下shift+鼠标右键 ，在此目录下打开powershell，此时powershell的路径已经在当前文件夹。
+打开powershell输入tensorboard --logdir logs，运行结果会出现localhost网站，复制该网站在浏览器打开，就可以看到tensorboard
+
+
 ### pycharm远程调试
 教程：
 https://www.cnblogs.com/xuegqcto/p/8621689.html

@@ -100,6 +100,10 @@ v2中移除了v1最后的两层全连接层，全连接层计算量大，耗时�
 这里会遇到一个问题，类别之间并不一定是互斥关系，可能是包含（例如人与男人）、相交（运动员与男人），那么在网络中，该怎么对类别进行预测和训练呢？），在文中，作者使用WordTree，解决了ImageNet与coco之间的类别问题
 #### YOLOv3
 
+1.Rectangular training/inference 矩形训练/推理
+
+https://blog.csdn.net/zicai_jiayou/article/details/109623578
+
 参考代码1：
 
 https://github.com/eriklindernoren/PyTorch-YOLOv3

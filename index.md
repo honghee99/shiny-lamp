@@ -261,4 +261,7 @@ For more details see [GitHub Flavored Markdown](https://guides.github.com/featur
 
 解决方法：路径错误，run configration里面脚本路径和工作目录都设置为服务器上的路径
 
+### C++踩过的坑
+
+1.定义方法（成员函数）时，return应写在for循环之外，return只能写在函数体里
 https://www.cnblogs.com/andre-ma/p/13424741.html

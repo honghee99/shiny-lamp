@@ -183,6 +183,7 @@ vector<int>a,b(n,0)的意思就是 创建了一个 int 类型的空的vector容�
 
 8.约束优化方法
 共轭梯度法在用sn-1时就能找到最优点
+
 DFP算法
 ![image](https://user-images.githubusercontent.com/49737867/115023171-fda94280-9ef0-11eb-86ae-e7c22a17558a.png)
 ### DeepLearning

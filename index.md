@@ -289,6 +289,9 @@ For more details see [GitHub Flavored Markdown](https://guides.github.com/featur
 
 4.多态：在基类中定义了一个虚拟函数，然后在派生类中又定义一个同名，同参数表的函数，这就是多态。多态是这3种情况中唯一采用动态绑定技术的一种情况。也就是说，通过一个基类指针来操作对象，如果对象是基类对象，就会调用基类中的那个函数，如果对象实际是派生类对象，就会调用派生类中的那个函数，调用哪个函数并不由函数的参数表决定，而是由函数的实际类型决定。
 
+5.异类收集：
+![image](https://user-images.githubusercontent.com/49737867/115204398-071def00-a12b-11eb-960f-0f7a5c12114e.png)
+
 ### 水刊
 ieee Access
 https://www.cnblogs.com/andre-ma/p/13424741.html

@@ -311,7 +311,8 @@ For more details see [GitHub Flavored Markdown](https://guides.github.com/featur
 
 5.异类收集：
 ![image](https://user-images.githubusercontent.com/49737867/115204398-071def00-a12b-11eb-960f-0f7a5c12114e.png)
-
+### 数据集
+http://host.robots.ox.ac.uk/pascal/VOC/voc2012/index.html#devkit
 ### 水刊
 ieee Access
 https://www.cnblogs.com/andre-ma/p/13424741.html

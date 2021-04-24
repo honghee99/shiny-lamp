@@ -299,6 +299,12 @@ For more details see [GitHub Flavored Markdown](https://guides.github.com/featur
 
 2.运行时停在某个地方不报错（只是一个函数的for循环），但此时debug却能成功运行（不要设置任何断电）。
 
+### git踩过的坑
+1.git 先pull然后add再commit最后push
+push报错 Failed to connect to github.com port 443: Timed out 
+解决方法：执行git config --global --unset http.proxy
+
+
 ### C++踩过的坑
 
 1.定义方法（成员函数）时，return应写在for循环之外，return只能写在函数体里

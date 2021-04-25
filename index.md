@@ -334,6 +334,10 @@ numpy版本过低导致，先pip uninstall numpy 然后pip install numpy就可�
 5.异类收集：
 ![image](https://user-images.githubusercontent.com/49737867/115204398-071def00-a12b-11eb-960f-0f7a5c12114e.png)
 ### 数据集
+cocoAPI
+所以，现在的开源论文项目，都是将COCO API再加工，封装为一个适合模型训练和测试的dataset class。
+详情见https://blog.csdn.net/qq_34914551/article/details/103793104
+
 http://host.robots.ox.ac.uk/pascal/VOC/voc2012/index.html#devkit
 ### 水刊
 ieee Access

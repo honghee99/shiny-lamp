@@ -42,13 +42,21 @@ message ConcatParameter {
 5.downsample下采样 ：
 缩小图像(或称为下采样(subsampled)或降采样(downsampled)的主要目的有两个:1.使得图像符合显示区域的大小,2生成对应图像的缩略图
 
-6.构建coco对象， coco = pycocotools.coco.COCO(json_file)
+6. COCO API
+构建coco对象， coco = pycocotools.coco.COCO(json_file)
+
 coco.getImgIds(self, imgIds=[], catIds=[]) 返回满足条件的图像id
+
 coco.imgs.keys() 数据集中所有样本的id号
-coco.imgToAnns.keys() 数据集中有GT对应的图像样本的id号（用来过滤没有标签的样本）
+
+coco.imgToAnns.keys() 数据集中有GT（真实的框）对应的图像样本的id号（用来过滤没有标签的样本）
+
 coco.getCatIds 返回含有某一类或者几类的类别id号
+
 coco.loadImgs()根据id号，导入对应的图像信息
+
 coco.getAnnIds() 根据id号，获得该图像对应的GT的id号
+
 coco.loadAnns() 根据 Annotation id号，导入标签信息
 
 #### Faster RCNN

@@ -308,19 +308,18 @@ push报错 Failed to connect to github.com port 443: Timed out
 解决方法：执行git config --global --unset http.proxy
 
 ### pycharm添加库踩过的坑
-【python】pip指定路径安装文件
-1.在网上下载个tar.gz的安装包，用pip在指定目录安装
+1.【python】pip指定路径安装文件
+（1）在网上下载个tar.gz的安装包，用pip在指定目录安装
 
 pip install --target=路径  文件名
 
 pip install --target=E:\work\zicai\pd_code\AutoTest3.7\shujia\venv\Lib\site-packages xlwings-0.18.0.tar.gz
 
-2.指定下载pyecharts包1.7.0版本到执行路径
+（2）指定下载pyecharts包1.7.0版本到执行路径
 
 pip3 install -i https://pypi.doubanio.com/simple pyecharts==1.7.0 --target=E:\work\zicai\pd_code\AutoTest3.7\shujia\venv\Lib\site-packages
-
-
-twisted 18.7.0 requires PyHamcrest>=1.9.0, which is not installed
+2.报错numpy.ufunc size changed, may indicate binary incompatibility
+numpy版本过低导致，先pip uninstall numpy 然后pip install numpy就可解决问题
 
 ### C++踩过的坑
 

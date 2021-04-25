@@ -303,9 +303,13 @@ For more details see [GitHub Flavored Markdown](https://guides.github.com/featur
 1.git 先pull然后add再commit最后push
 语句分别是：
 git pull
+
 git add .
+
 git commit -m '你要填的信息'
+
 git push
+
 push报错 Failed to connect to github.com port 443: Timed out 
 解决方法：执行git config --global --unset http.proxy
 

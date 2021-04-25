@@ -176,19 +176,13 @@ vector<int>a,b(n,0)的意思就是 创建了一个 int 类型的空的vector容�
 4.在约束方程组矩阵挑出r个线性无关的列，求出一个x（除了线性无关的列对应的x分量，其他列对应的x都为0）
 #### 线性规划
 1.单纯形法：建表 计算检验数 找检验数最小的列（ak）进基，计算yi0/yik找到最小的（并且必须大于零）离基，直至检验数为0
-
 2.对偶单纯形法：化标准形式（不要求b大于0）建表，求对偶可行的基本解，若xB中有负的分量把最小的离基，zj-cj/ykj（需ykj<0，yij表示单纯形表中第Bi行的各个元素，k其实是单纯形表中的第k行，也是上一步确定离基矢量时对应的一行） ，直到所有分量都大于0
 #### 无约束非线性规划
 7.牛顿法，s=负海森阵的逆乘梯度
-
 8.约束优化方法
 共轭梯度法在用sn-1时就能找到最优点
-
 DFP算法
-![image](https://user-images.githubusercontent.com/49737867/115023171-fda94280-9ef0-11eb-86ae-e7c22a17558a.png)
 #### 约束非线性规划
-![image](https://user-images.githubusercontent.com/49737867/115395280-483efd80-a216-11eb-9582-dc818de05540.png)
-
 *******点迭代之后有效集或者二次逼近法里的约束集也会变，约束集也要更新***********************
 1.可行性方向法
 求可行方向A1d≤0，可行的改进方向▽f（x）d<0
@@ -313,6 +307,20 @@ git push
 push报错 Failed to connect to github.com port 443: Timed out 
 解决方法：执行git config --global --unset http.proxy
 
+### pycharm添加库踩过的坑
+【python】pip指定路径安装文件
+1.在网上下载个tar.gz的安装包，用pip在指定目录安装
+
+pip install --target=路径  文件名
+
+pip install --target=E:\work\zicai\pd_code\AutoTest3.7\shujia\venv\Lib\site-packages xlwings-0.18.0.tar.gz
+
+2.指定下载pyecharts包1.7.0版本到执行路径
+
+pip3 install -i https://pypi.doubanio.com/simple pyecharts==1.7.0 --target=E:\work\zicai\pd_code\AutoTest3.7\shujia\venv\Lib\site-packages
+
+
+twisted 18.7.0 requires PyHamcrest>=1.9.0, which is not installed
 
 ### C++踩过的坑
 

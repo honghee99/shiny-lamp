@@ -301,6 +301,7 @@ For more details see [GitHub Flavored Markdown](https://guides.github.com/featur
 
 ### git踩过的坑
 1.git 先pull然后add再commit最后push
+
 push报错 Failed to connect to github.com port 443: Timed out 
 解决方法：执行git config --global --unset http.proxy
 

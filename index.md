@@ -59,17 +59,7 @@ coco.getAnnIds() 根据id号，获得该图像对应的GT的id号
 
 coco.loadAnns() 根据 Annotation id号，导入标签信息
 
-#### Faster RCNN
-1.提出anchor box的原因：
-一个窗口只能检测一个目标
-无法解决多尺度问题。
-2.什么时候触发anchorbox？
-训练阶段：
-在经过一系列卷积和池化之后，在feature map层使用anchor box，如上图所示，经过一系列的特征提取，最后针对 [公式] 的网格会得到一个 [公式] 的特征层，其中2是anchor box的个数，以《deep learning》课程为例选择两个anchor box，8代表每个anchor box包含的变量数，分别是4个位置偏移量、3个类别(one-hot标注方式)、1个anchor box标注(如果anchor box与真实边框的交并比最大则为1，否则为0)。
 
-（个人认为四个位置偏移量是针对整张图的，而不是针对特征图里的小框框）
-
-到了特征层之后对每个cell映射到原图中，找到预先标注的anchor box，然后计算这个anchor box与ground truth之间的损失，训练的主要目的就是训练出用anchor box去拟合真实边框的模型参数。
 
 #### NMS（non-maximum suppression）
 
@@ -81,15 +71,56 @@ coco.loadAnns() 根据 Annotation id号，导入标签信息
 
 #### RCNN 
 分三步
-第一步 通过SS算法生成候选框
+第一步 通过Selective Search算法生成候选框
 
-第二部 对每个候选框用深度网络提取信息（候选框进入网络之前先进性reset处理，统一缩放到227*227），缩放后的候选框（其实是图片）输入到网络（图像分类网络），得到特征向量（网络的全连接层去掉了）
+第二步 对每个候选框用深度网络提取信息（候选框进入网络之前先进性reset处理，统一缩放到227*227），缩放后的候选框（其实是图片）输入到网络（图像分类网络），得到特征向量（网络的全连接层去掉了）
 
-第三步 特征送入每一个svm类别的分类器
+第三步 特征送入每一个svm类别的分类器 对svm结果矩阵每一列（也是每一类）非极大值抑制 只留下最准确的边界框，删除了重叠的候选框
 
-第四步 使用回归器精细修正候选框的位置
+第四步 使用回归器（最小二乘法）也是算IoU精细修正候选框的位置 （在上一步的基础上）
 
-对svm结果矩阵每一列（也是每一类）非极大值抑制 只留下最准确的边界框
+RCNN存在的问题，候选框大量重叠冗余，训练速度慢（要训练分类网络（去掉全连接层用于提取特征），svm分类器，bbox回归器），每一个候选框都要写入磁盘，浪费空间
+
+![image](https://user-images.githubusercontent.com/49737867/116064994-1f58b580-a6b9-11eb-9f12-8639a6279621.png)
+
+#### FastRCNN
+用VGG16作为backbone，比RCNN快了9倍，准确率从62%提升至66%
+第一步 通过ss算法生成1k到2k个候选区域
+
+第二步 图像通过CNN生成feature map，将候选区域投影到featuremap中 获得相应的特征矩阵 （参考了spp net）
+
+第三步 将每个特征矩阵通过RoI（region of interest） Pooling层缩放到7*7大小的特征图，接着将特征图展平，通过一些列全连接层得到预测的结果
+分类和回归都在一个网络中，因此不需要单独训练svm分类器和回归器
+
+候选区域的特征矩阵直接映射得到，也就不需要重复计算了
+
+并且训练的时候并不使用ss算法提供的所有区域，而且采用了采样sampling
+训练数据的采样，（正样本，负样本）
+RoI最大池化下采样，把任何图片转成7*7，因此不限制输入图像的尺寸
+
+当然Fast RCNN的主要缺点在于region proposal的提取使用selective search，目标检测时间大多消耗在这上面（提region proposal 2~3s，而提特征分类只需0.32s），这也是后续Faster RCNN的改进方向之一。
+边界框公式里面的d是超参
+
+我的问题：
+回归的全连接层有（n+1）*4个节点，那么是不是一个候选框的结果框出两个目标
+
+我的理解：虽然bbox回归器中有4*（n+1）个节点，但是我们最后根据分类器概率最大的找出对应的类，只看bbox中对应该类的（x,y,w,h）
+![image](https://user-images.githubusercontent.com/49737867/116075425-83817680-a6c5-11eb-99e3-20fac24e8407.png)
+
+#### Faster RCNN
+检测速度5fps
+1.提出anchor box的原因：
+一个窗口只能检测一个目标
+无法解决多尺度问题。
+2.什么时候触发anchorbox？
+训练阶段：
+在经过一系列卷积和池化之后，在feature map层使用anchor box，如上图所示，经过一系列的特征提取，最后针对 [公式] 的网格会得到一个 [公式] 的特征层，其中2是anchor box的个数，以《deep learning》课程为例选择两个anchor box，8代表每个anchor box包含的变量数，分别是4个位置偏移量、3个类别(one-hot标注方式)、1个anchor box标注(如果anchor box与真实边框的交并比最大则为1，否则为0)。
+
+（个人认为四个位置偏移量是针对整张图的，而不是针对特征图里的小框框）
+
+到了特征层之后对每个cell映射到原图中，找到预先标注的anchor box，然后计算这个anchor box与ground truth之间的损失，训练的主要目的就是训练出用anchor box去拟合真实边框的模型参数。
+
+![image](https://user-images.githubusercontent.com/49737867/116078973-db21e100-a6c9-11eb-81fa-48f4fbd4079d.png)
 
 #### YOLOv1
 优点：
@@ -287,7 +318,7 @@ Maxpooling利用了Max是如何微分的？利用maxout network.
 #### 训练集，测试集，验证集
 
 将数据划分训练集、验证集和测试集。在训练集上训练模型，在验证集上评估模型，一旦找到的最佳的参数，就在测试集上最后测试一次，测试集上的误差作为泛化误差的近似。
-从狭义来讲，验证集没有参与梯度下降的过程
+
 ### matlab
 MATLAB的inline通俗的来说就是用于定义函数，如图所示我们使用inline定义一个函数
 

@@ -352,12 +352,16 @@ os.path.splitext(“文件路径”) 分离文件名与扩展名；默认返回(
 远程调试教程：
 https://www.cnblogs.com/xuegqcto/p/8621689.html
 For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-1.踩过的坑：远程调试时找不到文件
-
+1.踩过的坑：
+远程调试时找不到文件
 解决方法：路径错误，run configration里面脚本路径和工作目录都设置为服务器上的路径
+！！！远程调试注意设置好三个路径
+1.setting里interpreter的本地目录和远程目录
+2.run和debug的配置路径（都写远程的）
+3.development的配置文件，run/debug的配置文件的路径用“\” development的配置文件路径用“/”（远程开发的情况）
 
-2.运行时停在某个地方不报错（只是一个函数的for循环），但此时debug却能成功运行（不要设置任何断电）。
-！！！run/debug的配置文件的路径用“\” development的配置文件路径用“/”（远程开发的情况）
+异常问题：运行时停在某个地方不报错（只是一个函数的for循环），但此时debug却能成功运行（不要设置任何断电）。
+
 无线重置 
 https://mp.weixin.qq.com/s/4Mxi3A8ZGmAVqRQE3-Pkqw
 ### git踩过的坑

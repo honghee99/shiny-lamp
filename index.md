@@ -357,7 +357,7 @@ For more details see [GitHub Flavored Markdown](https://guides.github.com/featur
 解决方法：路径错误，run configration里面脚本路径和工作目录都设置为服务器上的路径
 
 2.运行时停在某个地方不报错（只是一个函数的for循环），但此时debug却能成功运行（不要设置任何断电）。
-
+！！！run/debug的配置文件的路径用“\” development的配置文件路径用“/”（远程开发的情况）
 无线重置 
 https://mp.weixin.qq.com/s/4Mxi3A8ZGmAVqRQE3-Pkqw
 ### git踩过的坑

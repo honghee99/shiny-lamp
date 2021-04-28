@@ -105,11 +105,10 @@ RoI最大池化下采样，把任何图片转成7*7，因此不限制输入图�
 ![image](https://user-images.githubusercontent.com/49737867/116075425-83817680-a6c5-11eb-99e3-20fac24e8407.png)
 
 #### Faster RCNN
-<font color=red>我是红色</font>缺点：
+<font color=red>缺点：
+  1.检测速度慢（因为分两步）
+  2.很难检测小物体</font>
 
-<font color=red>我是红色</font>1.检测速度慢（因为分两步）
-
-<font color=red>我是红色</font>2.很难检测小物体
 检测速度5fps
 1.提出anchor box的原因：
 一个窗口只能检测一个目标

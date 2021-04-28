@@ -177,6 +177,7 @@ https://github.com/eriklindernoren/PyTorch-YOLOv3
 #### SSD算法
 
 在不同特征图上匹配不同的目标
+ default box：相当于在每个特征图上的anchor box
 
 #### 目标检测评价指标
 1.置信度：置信度即模型认为检测框中存在目标的确信度。对于一个检测框，会首先使用置信度阈值进行过滤，当检测框的置信度大于该阈值时才认为检测框中存在目标（即为正样本，positive），否则认为不存在目标（即为负样本，negative）。

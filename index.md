@@ -38,7 +38,6 @@ message ConcatParameter {
 目标检测任务中，上采样和下采样又有了不同的定义。
 上采样的目的是减少感受野，一般用来检测小物体，方法是采用高分辨率的图片。下采样的目的是增大感受野，用来检测大物体，方法是采用低分辨率的图片。
 
-
 5.downsample下采样 ：
 缩小图像(或称为下采样(subsampled)或降采样(downsampled)的主要目的有两个:1.使得图像符合显示区域的大小,2生成对应图像的缩略图
 
@@ -58,8 +57,6 @@ coco.loadImgs()根据id号，导入对应的图像信息
 coco.getAnnIds() 根据id号，获得该图像对应的GT的id号
 
 coco.loadAnns() 根据 Annotation id号，导入标签信息
-
-
 
 #### NMS（non-maximum suppression）
 
@@ -282,8 +279,6 @@ DFP算法
 
 ![22](https://user-images.githubusercontent.com/49737867/113258918-1fa2a280-92ff-11eb-958a-341bd5a2ad24.png)
 
-
-
 3.sub![Uploading 22.png…]()
 sampling子抽样，抽出图片中一个区域，比如把这张图片的奇数行偶数列拿掉，不会影响人对这张image的理解，这也是卷积神经网络池化的思想。
 
@@ -315,6 +310,8 @@ Maxpooling利用了Max是如何微分的？利用maxout network.
 9.CNN处理后的结果是几维取决于fillter的个数
 
 10.inference 推理，就是把训练好的模型拿出来遛一遛
+
+11.1x1 卷积可以压缩信道数。池化可以压缩宽和高
 #### Dropout
 当一个复杂的前馈神经网络被训练在小的数据集时，容易造成过拟合
 

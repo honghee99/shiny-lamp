@@ -335,6 +335,10 @@ Maxpooling利用了Max是如何微分的？利用maxout network.
 当一个复杂的前馈神经网络被训练在小的数据集时，容易造成过拟合
 
 17.反卷积
+#### Dense Net
+DenseNet与ResNet的区别
+![image](https://user-images.githubusercontent.com/49737867/116500454-3548bf00-a8e1-11eb-8b29-98291922309c.png)
+
 
 #### 训练集，测试集，验证集
 

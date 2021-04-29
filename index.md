@@ -455,6 +455,9 @@ cocoAPI
 http://host.robots.ox.ac.uk/pascal/VOC/voc2012/index.html#devkit
 ### 水刊
 ieee Access
+
+idea：
+1.用一些模块替换以减少参数数量，避免不必要的计算
 https://www.cnblogs.com/andre-ma/p/13424741.html
 ### 傅里叶变换
 

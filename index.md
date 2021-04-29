@@ -36,9 +36,6 @@ upsampling(上采样)的三种方式：
 Resize，如双线性插值直接缩放，类似于图像缩放;
 反卷积(deconvolution & transposed convolution);
 反池化(unpooling)
-
-
-
 目标检测中上采样和下采样：
 目标检测任务中，上采样和下采样又有了不同的定义。
 上采样的目的是减少感受野，一般用来检测小物体，方法是采用高分辨率的图片。下采样的目的是增大感受野，用来检测大物体，方法是采用低分辨率的图片。
@@ -447,6 +444,7 @@ numpy版本过低导致，先pip uninstall numpy 然后pip install numpy就可�
 
 5.异类收集：
 ![image](https://user-images.githubusercontent.com/49737867/115204398-071def00-a12b-11eb-960f-0f7a5c12114e.png)
+
 ### 数据集
 cocoAPI
 所以，现在的开源论文项目，都是将COCO API再加工，封装为一个适合模型训练和测试的dataset class。

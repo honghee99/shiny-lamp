@@ -444,7 +444,7 @@ numpy版本过低导致，先pip uninstall numpy 然后pip install numpy就可�
 
 5.异类收集：
 ![image](https://user-images.githubusercontent.com/49737867/115204398-071def00-a12b-11eb-960f-0f7a5c12114e.png)
-
+6.vector二维数组的遍历方式
 ``` mark
 #include <iostream>
 using namespace std;

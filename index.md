@@ -466,6 +466,14 @@ int main()
 }
 ```
 C++中string为可变，java和python中string为不可变，如果要改变字符串的某一位，则需要新建一个字符串
+7.C++使用变量前一定要初始化，不然会报错
+terminate called after throwing an instance of 'std::length_error'
+例子如下
+  s.resize(len+ 2 * count);
+  这里的count我没有初始化
+  报如下错误
+  terminate called after throwing an instance of 'std::length_error'
+  what():  basic_string::_M_replace_aux
 ### 数据集
 cocoAPI
 所以，现在的开源论文项目，都是将COCO API再加工，封装为一个适合模型训练和测试的dataset class。

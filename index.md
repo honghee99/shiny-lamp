@@ -465,6 +465,7 @@ int main()
 	return 0;
 }
 ```
+C++中string为可变，java和python中string为不可变，如果要改变字符串的某一位，则需要新建一个字符串
 ### 数据集
 cocoAPI
 所以，现在的开源论文项目，都是将COCO API再加工，封装为一个适合模型训练和测试的dataset class。

@@ -474,6 +474,7 @@ terminate called after throwing an instance of 'std::length_error'
   报如下错误
   terminate called after throwing an instance of 'std::length_error'
   what():  basic_string::_M_replace_aux
+8.遍历字符串  for(char c : s) 也可以用常见的访问下标的方法
 ### 数据集
 cocoAPI
 所以，现在的开源论文项目，都是将COCO API再加工，封装为一个适合模型训练和测试的dataset class。

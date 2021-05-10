@@ -499,6 +499,23 @@ ieee Access
 idea：
 1.用一些模块替换以减少参数数量，避免不必要的计算
 https://www.cnblogs.com/andre-ma/p/13424741.html
+
+
+### jupyter notebook
+1.将conda的环境运用到jupyter notebook中
+安装
+python conda install ipykernel
+将conda环境写入kernel中
+python -m ipykernel install --user --name 环境名称 --display-name “Python (环境名称)”
+在anaconda prompt中激活虚拟环境
+cd到项目路径
+打开在 ananconda prompt中打开jupyter notebook
+2.连接不上kernel
+https://blog.csdn.net/rs_gis/article/details/104347481
+
+
+
+
 ### 傅里叶变换
 
 ![image](https://user-images.githubusercontent.com/49737867/116520908-e9f4d780-a905-11eb-95e4-41ab82ea646c.png)

@@ -559,10 +559,16 @@ C++里，数据没有被初始化则得到‘无意义的值’，java里数据�
 
 
 
+
+
 3.
 
 
 ### 傅里叶变换
 
 ![image](https://user-images.githubusercontent.com/49737867/116520908-e9f4d780-a905-11eb-95e4-41ab82ea646c.png)
+
+
+### Xshell
+执行exe文件安装没反应，系统没有彻底卸载原来的程序，产生了冲突，卸载干净后安装即可。
 

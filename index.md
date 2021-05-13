@@ -544,6 +544,13 @@ C++里，数据没有被初始化则得到‘无意义的值’，java里数据�
 |  byte   |      0      |
 |  short  |      0      |
 |    int  |      0      |
+|    long  |      0      |
+|    char  |      '\u0000'|
+|    float |  0.0F   |
+|  double |  0.0D   |
+|  boolean | false|
+|reference type| null |
+
 
 
 

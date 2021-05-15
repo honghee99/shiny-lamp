@@ -581,4 +581,7 @@ https://blog.csdn.net/qq_40711769/article/details/108434999?utm_medium=distribut
 执行py脚本
 python 文件名
 
+### pytorch基础
+nn.ModuleList
+但不同于一般的 list，加入到 nn.ModuleList 里面的 module 是会自动注册到整个网络上的，同时 module 的 parameters 也会自动添加到整个网络中。若使用python的list，则会出问题。下面看一个例子
 

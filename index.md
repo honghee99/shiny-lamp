@@ -574,7 +574,7 @@ https://blog.csdn.net/qq_40711769/article/details/108434999?utm_medium=distribut
 教程：https://www.cnblogs.com/blueel/archive/2012/12/24/2831129.html
 
 ### Linux 
-选定python解释器
+选定python解释器 #!用于指定哪个解释器来解释脚本
 #! /data/lihongxi/anaconda3/envs/ssd/bin python
 执行py脚本
 python 文件名

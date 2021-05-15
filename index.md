@@ -571,10 +571,21 @@ https://blog.csdn.net/qq_34288630/article/details/88352101
 https://blog.csdn.net/qq_40711769/article/details/108434999?utm_medium=distribute.pc_relevant.none-task-blog-baidujs_title-0&spm=1001.2101.3001.4242
 
 ### python基础
+1.关键字参数和非关键字参数的区别
 关键字参数（实参中有等号的）
 非关键字参数（多出来的实参中没有等号的）
-教程：https://www.cnblogs.com/blueel/archive/2012/12/24/2831129.html
+教程：https://www.cnblogs.com/blueel/archive/2012/12/24/2831129.html、
 
+2.parameters和arguments的区别
+　　定义（define）一个带parameters的函数：
+```
+def addition(x,y):
+　　return (x+y)
+```
+这里的x,y就是parameter,
+调用addition(3,4)
+,调用（call）这个函数时，3,4就是你传入的arguments,
+总得一句话来说，当你定义函数(define function)的时候，用的是parameters，当你实际调用函数（call function）的时候，传入的实际内容就是arguments
 ### Linux 
 选定python解释器 #!用于指定哪个解释器来解释脚本
 #! /data/lihongxi/anaconda3/envs/ssd/bin python

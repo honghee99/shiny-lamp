@@ -575,3 +575,6 @@ https://blog.csdn.net/qq_34288630/article/details/88352101
 ### Xshell
 执行exe文件安装没反应，系统没有彻底卸载原来的程序，产生了冲突，卸载干净后安装即可。
 
+### CV顶会
+截稿日期
+https://blog.csdn.net/qq_40711769/article/details/108434999?utm_medium=distribute.pc_relevant.none-task-blog-baidujs_title-0&spm=1001.2101.3001.4242

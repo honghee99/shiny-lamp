@@ -593,6 +593,8 @@ def addition(x,y):
 python 文件名
 
 ### pytorch基础
-nn.ModuleList
+1.nn.ModuleList
 但不同于一般的 list，加入到 nn.ModuleList 里面的 module 是会自动注册到整个网络上的，同时 module 的 parameters 也会自动添加到整个网络中。若使用python的list，则会出问题。下面看一个例子
+
+2.Torch Script中的核心数据结构是ScriptModule。 它是Torch的nn.Module的类似物，代表整个模型作为子模块树。 与普通模块一样，ScriptModule中的每个单独模块都可以包含子模块，参数和方法。 在nn.Modules中，方法是作为Python函数实现的，但在ScriptModules方法中通常实现为Torch Script函数，这是一个静态类型的Python子集，包含PyTorch的所有内置Tensor操作。 这种差异允许您运行ScriptModules代码而无需Python解释器。
 

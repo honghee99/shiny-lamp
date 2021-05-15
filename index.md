@@ -572,3 +572,11 @@ https://blog.csdn.net/qq_40711769/article/details/108434999?utm_medium=distribut
 关键字参数（实参中有等号的）
 非关键字参数（多出来的实参中没有等号的）
 教程：https://www.cnblogs.com/blueel/archive/2012/12/24/2831129.html
+
+### Linux 
+选定python解释器
+#! /data/lihongxi/anaconda3/envs/ssd/bin python
+执行py脚本
+python 文件名
+
+

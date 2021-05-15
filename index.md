@@ -551,18 +551,7 @@ C++里，数据没有被初始化则得到‘无意义的值’，java里数据�
 |  boolean | false|
 |reference type| null |
 
-
-
-
-
-
-
-
-
-
-
 3.
-
 
 ### 傅里叶变换
 
@@ -578,3 +567,8 @@ https://blog.csdn.net/qq_34288630/article/details/88352101
 ### CV顶会
 截稿日期
 https://blog.csdn.net/qq_40711769/article/details/108434999?utm_medium=distribute.pc_relevant.none-task-blog-baidujs_title-0&spm=1001.2101.3001.4242
+
+### python基础
+关键字参数（实参中有等号的）
+非关键字参数（多出来的实参中没有等号的）
+教程：https://www.cnblogs.com/blueel/archive/2012/12/24/2831129.html

@@ -193,6 +193,7 @@ https://github.com/eriklindernoren/PyTorch-YOLOv3
 2.训练基本类和新类的并集（由于新类样本小，防止训练结果侧重于训练类，因此在训练类中采样与新类一起训练）
 ![image](https://user-images.githubusercontent.com/49737867/117391073-d65af980-af21-11eb-85b4-18982a18e1b1.png)
 
+2020CVPR论文盘点
 #### 目标检测评价指标
 1.置信度：置信度即模型认为检测框中存在目标的确信度。对于一个检测框，会首先使用置信度阈值进行过滤，当检测框的置信度大于该阈值时才认为检测框中存在目标（即为正样本，positive），否则认为不存在目标（即为负样本，negative）。
 

@@ -350,7 +350,6 @@ Maxpooling利用了Max是如何微分的？利用maxout network.
 
 15.2*2步距为2图片缩小一半 3*3步距为图片大小不变
 
-
 调整感受野（多尺度信息）的同时控制分辨率的神器
 #### Dropout
 当一个复杂的前馈神经网络被训练在小的数据集时，容易造成过拟合
@@ -381,6 +380,21 @@ https://blog.csdn.net/u010698086/article/details/78046671
 #### 训练集，测试集，验证集
 
 将数据划分训练集、验证集和测试集。在训练集上训练模型，在验证集上评估模型，一旦找到的最佳的参数，就在测试集上最后测试一次，测试集上的误差作为泛化误差的近似。
+
+#### 减小神经网络的参数
+##### weight pruning
+为什么剪枝？
+因为直接训练一个小的网络很难
+大乐透假说 ICOR
+![image](https://user-images.githubusercontent.com/49737867/119223790-e849b880-bb2d-11eb-8caa-d73f983dd8b2.png)
+
+##### knowledge distillation
+![image](https://user-images.githubusercontent.com/49737867/119224025-167bc800-bb2f-11eb-8e56-d3b8829c7136.png)
+ 利用一个已经学好的大model，来教小model如何做好任务。
+能提取出类别与类别之间的隐含信息
+应用：通常只用在Classification，而且学生只能从头学起，可以应用到GAN上面
+	
+
 
 ### matlab
 MATLAB的inline通俗的来说就是用于定义函数，如图所示我们使用inline定义一个函数

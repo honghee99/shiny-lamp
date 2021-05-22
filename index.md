@@ -183,6 +183,7 @@ https://github.com/eriklindernoren/PyTorch-YOLOv3
 在不同特征图上匹配不同的目标
  default box：相当于在每个特征图上的anchor box
 
+详细博文 https://blog.csdn.net/weixin_41936775/article/details/115617687
 #### 论文笔记 2021CVPR
 
 将小样本学习应用在目标检测上。要点是解决视觉与语义上的鸿沟（用transformer进行关系推理）

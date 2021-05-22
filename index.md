@@ -194,6 +194,9 @@ https://github.com/eriklindernoren/PyTorch-YOLOv3
 ![image](https://user-images.githubusercontent.com/49737867/117391073-d65af980-af21-11eb-85b4-18982a18e1b1.png)
 
 2020CVPR论文盘点
+
+https://blog.csdn.net/anlimo1510/article/details/108887285
+
 #### 目标检测评价指标
 1.置信度：置信度即模型认为检测框中存在目标的确信度。对于一个检测框，会首先使用置信度阈值进行过滤，当检测框的置信度大于该阈值时才认为检测框中存在目标（即为正样本，positive），否则认为不存在目标（即为负样本，negative）。
 

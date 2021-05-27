@@ -223,8 +223,12 @@ https://blog.csdn.net/anlimo1510/article/details/108887285
 
 ### 文本分类
 #### VSM算法
-TF-IDF
+
 https://blog.csdn.net/xiangshoujiyi/article/details/51316072
+#### sklearn-TfidfVectorizer
+https://zhuanlan.zhihu.com/p/67883024
+
+
 ### Colab踩坑记录
 1.一定要注意先选取运行环境！！！否则后面的工作白做
 

@@ -228,7 +228,10 @@ https://blog.csdn.net/xiangshoujiyi/article/details/51316072
 #### sklearn-TfidfVectorizer
 https://zhuanlan.zhihu.com/p/67883024
 
+#### Tokenizer
+科学使用Tokenizer的方法是，首先用Tokenizer的 fit_on_texts 方法学习出文本的字典，然后word_index 就是对应的单词和数字的映射关系dict，通过这个dict可以将每个string的每个词转成数字，可以用texts_to_sequences，这是我们需要的，然后通过padding的方法补成同样长度，在用keras中自带的embedding层进行一个向量化，并输入到LSTM中
 
+http://blog.sina.com.cn/s/blog_87c4e86b0102z2j3.html
 ### Colab踩坑记录
 1.一定要注意先选取运行环境！！！否则后面的工作白做
 

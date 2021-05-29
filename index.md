@@ -628,7 +628,8 @@ python 文件名
 ### tensorflow踩的坑
 用GPU运行tf写的脚本
 https://positive.blog.csdn.net/article/details/107037663
-	
+nvcc	
+https://blog.csdn.net/qxqxqzzz/article/details/105549573	
 	
 ### pytorch基础
 1.nn.ModuleList

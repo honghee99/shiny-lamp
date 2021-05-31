@@ -1,4 +1,4 @@
-## HL-Note
+ ## HL-Note
 ### Detection
 #### Detection History
 ![目标检测发展史](https://user-images.githubusercontent.com/49737867/113255745-c59fde00-92fa-11eb-977c-7d3864960c85.png)
@@ -221,6 +221,8 @@ https://blog.csdn.net/anlimo1510/article/details/108887285
 
 7.mAP的计算 ...
 
+8。focal loss函数（用于解决正负样本不均衡）
+https://www.cnblogs.com/king-lps/p/9497836.html
 ### 文本分类
 #### VSM算法
 

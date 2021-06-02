@@ -62,6 +62,10 @@ coco.loadAnns() 根据 Annotation id号，导入标签信息
 
 7.Few-shot检测器,称为SRR-FSD
 
+
+8. label assignment
+label assignment就是要对目标检测中的anchor box或者anchor point打上label，是positive、negative还是ignore。这里面有两个挑战，一个挑战是negative非常多，容易导致样本不均衡问题；另一个挑战是判定标准只能经验性地设置，然后通过实验结果来验证，基本是一个trial and error的过程。
+
 #### NMS（non-maximum suppression）
 
 对于一个预测边界框B，模型最终会输出会计算它属于每个类别的概率值，其中概率值最大对应的类别就是预测边界框的类别。在同一副图像上，把所有预测边界框(不区分类别)的预测概率从大到小进行排列，然后取出最大概率的预测边界框B1作为基准，然后计算剩余的预测边界框与B1的交并比，如果大于给定的某个阈值，则将这个预测边界框移除。这样的话保留了概率最大的预测边界框并移除了其他与其相似的边界框。接下来要做的就是从剩余的预测边界框中选出概率值最大的预测边界框B2计算过程重复上述的过程

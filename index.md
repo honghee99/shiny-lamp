@@ -65,6 +65,7 @@ coco.loadAnns() 根据 Annotation id号，导入标签信息
 
 8. label assignment
 label assignment就是要对目标检测中的anchor box或者anchor point打上label，是positive、negative还是ignore。这里面有两个挑战，一个挑战是negative非常多，容易导致样本不均衡问题；另一个挑战是判定标准只能经验性地设置，然后通过实验结果来验证，基本是一个trial and error的过程。
+https://zhuanlan.zhihu.com/p/166275032
 
 #### NMS（non-maximum suppression）
 

@@ -76,6 +76,18 @@ https://zhuanlan.zhihu.com/p/166275032
 3.为了提高召回率，需要在图像上放置密集的锚框。而这些锚框大多数属于负样本，这样造成了正负样本之间的不均衡。
 4.大量的锚框增加了在计算交并比时计算量和内存占用。
 
+10.positive与negative
+首先在进行预测后，我们可以按照置信度大小排序并且选择一个阈值作为预测的正负类的评判标准，大于阈值预测为正类否则为负类
+![image](https://user-images.githubusercontent.com/49737867/120477056-e6111500-c3dd-11eb-98f6-5de3a213d3fc.png)
+true positive和false positive
+![image](https://user-images.githubusercontent.com/49737867/120477486-66d01100-c3de-11eb-933f-18f9dc033c0f.png)
+目标检测基础博文（讲的很好）
+https://www.cnblogs.com/supersayajin/p/9498226.html
+
+11.precision（查全率）和recall（查准率）
+![image](https://user-images.githubusercontent.com/49737867/120477160-08a32e00-c3de-11eb-81b7-1b056c07db19.png)
+precision侧重于考察预测的结果为正类样本中的准确程度，而recall侧重于考察真实的正类样本是被预测正确的全面程度
+
 #### NMS（non-maximum suppression）
 
 对于一个预测边界框B，模型最终会输出会计算它属于每个类别的概率值，其中概率值最大对应的类别就是预测边界框的类别。在同一副图像上，把所有预测边界框(不区分类别)的预测概率从大到小进行排列，然后取出最大概率的预测边界框B1作为基准，然后计算剩余的预测边界框与B1的交并比，如果大于给定的某个阈值，则将这个预测边界框移除。这样的话保留了概率最大的预测边界框并移除了其他与其相似的边界框。接下来要做的就是从剩余的预测边界框中选出概率值最大的预测边界框B2计算过程重复上述的过程

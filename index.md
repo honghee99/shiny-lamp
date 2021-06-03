@@ -225,9 +225,11 @@ https://github.com/eriklindernoren/PyTorch-YOLOv3
 https://blog.csdn.net/anlimo1510/article/details/108887285
 
 #### 目标检测评价指标
-<font color=red>1.置信度：置信度即模型认为检测框中存在目标的确信度。对于一个检测框，会首先使用置信度阈值进行过滤，当检测框的置信度大于该阈值时才认为检测框中存在目标（即为正样本，positive），否则认为不存在目标（即为负样本，negative）。
+<font color=red>
+1.置信度：置信度即模型认为检测框中存在目标的确信度。对于一个检测框，会首先使用置信度阈值进行过滤，当检测框的置信度大于该阈值时才认为检测框中存在目标（即为正样本，positive），否则认为不存在目标（即为负样本，negative）。
 
-<font color=red>2.IoU：IoU阈值，所谓IoU，就是交并比，是用来衡量两个矩形框重合程度的一种度量指标，当模型给出的检测框和真实的目标框之间的IoU大于该阈值时，才认为该检测框是正确的，即为True Positive，否则为False Positive。只有当检测框的置信度和与真实标定框的IoU分别都大于置信度阈值和IoU阈值时，才认为该检测框为正确的。
+<font color=red>
+2.IoU：IoU阈值，所谓IoU，就是交并比，是用来衡量两个矩形框重合程度的一种度量指标，当模型给出的检测框和真实的目标框之间的IoU大于该阈值时，才认为该检测框是正确的，即为True Positive，否则为False Positive。只有当检测框的置信度和与真实标定框的IoU分别都大于置信度阈值和IoU阈值时，才认为该检测框为正确的。
 
 3.recall：召回率，记做R，表示你预测的结果中有多少正样本被正确检测出来，当R=100%的时候，表示没有漏检。
 
@@ -247,7 +249,7 @@ https://blog.csdn.net/anlimo1510/article/details/108887285
 
 7.mAP的计算 ...
 
-8。focal loss函数（用于解决正负样本不均衡）
+8focal loss函数（用于解决正负样本不均衡）
 https://www.cnblogs.com/king-lps/p/9497836.html
 ### 文本分类
 #### VSM算法
